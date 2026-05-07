@@ -1,0 +1,31 @@
+{
+  "name": "clinical-handover-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for clinical handover validation, risk classification, SBAR generation, and follow-up task extraction.",
+  "type": "module",
+  "bin": {
+    "clinical-handover-mcp": "./build/index.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "start": "node build/index.js",
+    "inspect": "npx @modelcontextprotocol/inspector node build/index.js",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "dotenv": "^16.4.7",
+    "express": "^5.2.1",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
